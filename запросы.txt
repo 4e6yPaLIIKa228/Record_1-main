@@ -1,0 +1,21 @@
+Traffics.Day1
+
+
+SELECT Groups.ID,GroStudents.NSM,Day1 FROM Students JOIN Traffics on Students.IDTraffic = Traffics.ID 
+
+
+JOIN Months on Traffics.ID Month = Months.ID
+
+
+
+SELECT Students.NSM,Groups.NameGroup, Months.Month, Traffics.Day1,Traffics.Day2,Traffics.Day3,Traffics.Day4,Traffics.Day5,Traffics.Day6,Traffics.Day7,Traffics.Day8,Traffics.Day9,Traffics.Day10,Traffics.Day11,Traffics.Day12,Traffics.Day13,Traffics.Day14,Traffics.Day15,Traffics.Day16,Traffics.Day17,Traffics.Day18,Traffics.Day19,Traffics.Day20,Traffics.Day21,Traffics.Day22,Traffics.Day23,Traffics.Day24,Traffics.Day25,Traffics.Day26,Traffics.Day27,Traffics.Day28,Traffics.Day29,Traffics.Day31,Traffics.Day31 FROM Students 
+JOIN Months on Traffics.ID = Months.ID
+JOIN Traffics on Students.IDTraffic = Traffics.ID
+JOIN Groups on Students.IDGroup = Groups.ID
+WHERE Groups.NameGroup = 'сип' and Traffics.IDMonth = '1'
+
+План
+1) Доделать редактирование
+2) Добавить функцию добавления группы в новый месяц(сложно)
+3) Добавление Студентов
+4) Вывод на печать				

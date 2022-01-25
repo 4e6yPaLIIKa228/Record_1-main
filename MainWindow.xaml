@@ -1,0 +1,75 @@
+﻿<Window x:Class="Record.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Record"
+        mc:Ignorable="d"
+        Title="MainWindow"  Height="900" Width="1600" WindowState="Normal" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="299*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"   FontWeight="Bold"  FontSize="18" Text="Группы" Margin="0,-55,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <ComboBox Grid.Column="0"   x:Name="CbGroups" Margin="10,32,10,20"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="28" FontWeight="Bold" FontSize="16" SelectionChanged="CbGroups_SelectionChanged"  />
+            <TextBlock Grid.Column="1"   FontWeight="Bold"  FontSize="18" Text="Месяцы" Margin="0,-55,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <ComboBox Grid.Column="1"   x:Name="CbMonth" Margin="10,32,10,20"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="28" FontWeight="Bold" FontSize="16" SelectionChanged="CbMonth_SelectionChanged"  />
+            <Button x:Name="BtSearch" Content="Найти" Grid.Column="8" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" Width="61" Height="38" Click="BtSearch_Click"/>
+            <Button x:Name="BtSave" Content="Сохранить" Grid.Column="8" HorizontalAlignment="Left" Margin="100,32,0,0" VerticalAlignment="Top" Width="61" Height="38" Click="BtSave_Click"/>
+            <Button x:Name="BtAdd" Content="Добавить" Grid.Column="8" HorizontalAlignment="Left" Margin="190,32,0,0" VerticalAlignment="Top" Width="61" Height="38" Click="BtAdd_Click"/>
+            <TextBox x:Name="TbNumber"  Grid.Column="8" Margin="10,-5,0,0" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="219" MinHeight="22" VerticalContentAlignment="Center" IsReadOnly="True"/>
+            <!--IsEditable="True"  StaysOpenOnEdit="True"-->
+        </Grid>
+        <DataGrid x:Name="DGStudents" Grid.Column="0" RowHeight="30"   Grid.Row="2" Grid.RowSpan="1"  Margin="5" ColumnWidth="*" CanUserAddRows="False"  AutoGenerateColumns="False" MinColumnWidth="25" RowHeaderWidth="0" CellEditEnding="DGStudents_CellEditEnding"  >
+            <DataGrid.Columns>
+                <!--<DataGridTextColumn Header="ID" Width="15" Binding="{Binding ID}"  />-->
+                <DataGridTextColumn Header="ФИО"  Width="155"  Binding="{Binding NSM}"/>
+                <DataGridTextColumn Header="1"   Binding="{Binding Day1,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="2"   Binding="{Binding Day2,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="3"   Binding="{Binding Day3,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="4"   Binding="{Binding Day4,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="5"   Binding="{Binding Day5,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="6"   Binding="{Binding Day6,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="7"   Binding="{Binding Day7,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="8"   Binding="{Binding Day8,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="9"   Binding="{Binding Day9,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="10"  Binding="{Binding Day10,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="11"  Binding="{Binding Day11,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="12"  Binding="{Binding Day12,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="13"  Binding="{Binding Day13,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="14"  Binding="{Binding Day14,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="15"  Binding="{Binding Day15,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="16"  Binding="{Binding Day16,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="17"  Binding="{Binding Day17,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="18"  Binding="{Binding Day18,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="19"  Binding="{Binding Day19,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="20"  Binding="{Binding Day20,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="21"  Binding="{Binding Day21,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="22"  Binding="{Binding Day22,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="23"  Binding="{Binding Day23,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="24"  Binding="{Binding Day24,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="25"  Binding="{Binding Day25,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="26"  Binding="{Binding Day26,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="27"  Binding="{Binding Day27,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="28"  Binding="{Binding Day28,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="29"  Binding="{Binding Day29,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="30"  Binding="{Binding Day30,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="31"  Binding="{Binding Day31,UpdateSourceTrigger=PropertyChanged}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+    </Grid>
+</Window>
